@@ -3,8 +3,9 @@ require('dotenv').config();
 const cors = require('cors')
 const app = express();
 
-console.log(PORT);
+const PORT = process.env.PORT;
 
+console.log(process.env.CLUSTER);
 app.use(cors('*'));
 app.use(express.json());
 
