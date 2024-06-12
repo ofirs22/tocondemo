@@ -4,6 +4,8 @@ const cors = require('cors')
 const app = express();
 
 const PORT = process.env.PORT || 3038;
+console.log(PORT);
+console.log(process.env.CLUSTER);
 app.use(cors('*'));
 app.use(express.json());
 
