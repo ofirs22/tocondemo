@@ -3,14 +3,15 @@ require('dotenv').config();
 const cors = require('cors')
 const app = express();
 
-const PORT = process.env.PORT;
 console.log(PORT);
-console.log(process.env.CLUSTER);
+
 app.use(cors('*'));
 app.use(express.json());
 
 app.use(express.urlencoded({ extended: true })); /* bodyParser.urlencoded() is deprecated */
-
+app.get('/', (req, res)=> {
+    res.send('app is working')
+})
 const db = require("./models");
 db.mongoose
     .connect(db.url, {})

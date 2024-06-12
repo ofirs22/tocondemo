@@ -8,7 +8,7 @@ mongoose.set('strictQuery', false);
 const db = {};
 db.mongoose = mongoose;
 db.url = dbConfig.url;
-console.log(db.url, "url");
+
 db.user = require("./user.model.js")(mongoose);
 
 module.exports = db;
